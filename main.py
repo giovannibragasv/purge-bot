@@ -132,6 +132,5 @@ async def on_message(message):
             await message.channel.send(f"Ocorreu um erro: {e}", delete_after=5)
 
     await bot.process_commands(message)
-    await bot.process_application_commands(message)
 
 bot.run(TOKEN)
