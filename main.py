@@ -15,11 +15,12 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='--', intents=intents)
 
+# TODO: Add logging
+
 @bot.event
 async def on_ready():
     await bot.tree.sync()
-    print(f"Logado como {bot.user} (ID: {bot.user.id})")
-    print('------')
+    print(f"Logging as {bot.user} (ID: {bot.user.id})")
 
 @bot.tree.command(name="delete", description="Deleta mensagens contendo uma string específica do canal.")
 @app_commands.describe(amount="Número máximo de mensagens para deletar", search_str="String para procurar nas mensagens")
