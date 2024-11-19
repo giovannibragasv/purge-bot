@@ -21,4 +21,6 @@ build/
 *.njsproj
 *.sln
 
-/path
+path/
+to/
+venv/
